@@ -1,16 +1,29 @@
 # fmwasm
 
-[FM-index](https://en.wikipedia.org/wiki/FM-index) を Rust で実装し wasm にビルドし JavaScript からも触れるようにして、ブラウザの JavaScript で全文検索できるやつ。
+[FM-index](https://en.wikipedia.org/wiki/FM-index) implementation written in Rust.
+This library also generates WebAssembly library so that you can use this **full-text search engine in browsers**.
 
-[elasticlunr](http://elasticlunr.com/) みたいなやつ。
+I got an idea from [elasticlunr](http://elasticlunr.com/) about client-side full-text search engine.
+Compared to [elasticlunr](http://elasticlunr.com/), this library has following advantages:
 
-## Create Index File
+- Small index file (TODO: do experiments)
+- No need of tokenizer (useful for CJK languages)
+
+## NPM Library
+
+T.B.D.
+
+## Example
+
+NOTE: You can find more examples in `examples` directory.
+
+### Create Index File
 
 ```sh
-> echo "京都府京都市左京区吉田本町" | cargo run > index.bincode
+> echo "京都府京都市左京区吉田本町" | cargo run --release --example constract > index.bincode
 ```
 
-## Load Index File from Browser
+### Load Index File from Browser
 
 ```js
 (async () => {
@@ -32,9 +45,10 @@
 })();
 ```
 
-## 参考
+## References
 
 - [herumi/fmindex](https://github.com/herumi/fmindex)
 - [rust-bio/rust-bio](https://github.com/rust-bio/rust-bio)
 - [sekineh/wavelet-matrix-rs](https://github.com/sekineh/wavelet-matrix-rs)
 - [MitI-7/WaveletMatrix](https://github.com/MitI-7/WaveletMatrix)
+

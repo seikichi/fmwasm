@@ -5,7 +5,7 @@ authors = ["Seiichi KONDO <seikichi@kmc.gr.jp>"]
 edition = "2018"
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 bincode = "1.2"

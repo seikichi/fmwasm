@@ -1,11 +1,7 @@
 use std::error::Error;
 use std::io::{self, Read, Write};
 
-mod bit_vector;
-mod wavelet_matrix;
-mod fmindex;
-
-use fmindex::*;
+use fmwasm::*;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let mut buffer = String::new();
