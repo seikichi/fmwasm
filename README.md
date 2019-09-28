@@ -1,6 +1,6 @@
 # fmwasm
 
-[FM-Index](https://en.wikipedia.org/wiki/FM-index) を Rust で実装し wasm にビルドし JavaScript からも触れるようにして、ブラウザの JavaScript で全文検索できるやつ。
+[FM-index](https://en.wikipedia.org/wiki/FM-index) を Rust で実装し wasm にビルドし JavaScript からも触れるようにして、ブラウザの JavaScript で全文検索できるやつ。
 
 [elasticlunr](http://elasticlunr.com/) みたいなやつ。
 
@@ -31,3 +31,10 @@
   }
 })();
 ```
+
+## 参考
+
+- [herumi/fmindex](https://github.com/herumi/fmindex)
+- [rust-bio/rust-bio](https://github.com/rust-bio/rust-bio)
+- [sekineh/wavelet-matrix-rs](https://github.com/sekineh/wavelet-matrix-rs)
+- [MitI-7/WaveletMatrix](https://github.com/MitI-7/WaveletMatrix)
